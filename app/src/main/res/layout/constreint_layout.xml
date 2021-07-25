@@ -6,15 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="4dp"
         android:text="@string/buttonNumber"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="91dp" />
+        tools:layout_editor_absoluteY="381dp" />
 
     <Button
         android:id="@+id/button2"
@@ -22,25 +75,25 @@
         android:layout_height="wrap_content"
         android:text="@string/buttonNumber2"
         android:textSize="@dimen/textButtonSize"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="24dp" />
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="381dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="180dp"
         android:text="@string/buttonNumber3"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="20dp" />
+        tools:layout_editor_absoluteY="381dp" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="380dp"
         android:text="@string/buttonNumber4"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,22 +103,22 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="4dp"
         android:text="@string/buttonNumber5"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="160dp" />
+        tools:layout_editor_absoluteY="443dp" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="296dp"
+        android:layout_marginStart="104dp"
         android:text="@string/buttonNumber6"
 
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="91dp" />
+        tools:layout_editor_absoluteY="443dp" />
 
     <Button
         android:id="@+id/button7"
@@ -73,18 +126,18 @@
         android:layout_height="wrap_content"
         android:text="@string/buttonNumber7"
         android:textSize="@dimen/textButtonSize"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="27dp" />
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="434dp" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/buttonNumber8"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="144dp" />
+        tools:layout_editor_absoluteY="420dp" />
 
     <Button
         android:id="@+id/button9"
@@ -92,18 +145,18 @@
         android:layout_height="wrap_content"
         android:text="@string/buttonNumber9"
         android:textSize="@dimen/textButtonSize"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="151dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="509dp" />
 
     <Button
         android:id="@+id/button0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="216dp"
         android:text="@string/buttonNumber0"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="151dp" />
+        tools:layout_editor_absoluteY="509dp" />
 
     <Button
         android:id="@+id/button."
@@ -112,9 +165,9 @@
         android:text="@string/buttonNumberDot"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="91dp" />
+        tools:layout_editor_absoluteY="578dp" />
 
     <Button
         android:id="@+id/buttonC"
@@ -123,9 +176,9 @@
         android:text="@string/buttonNumberC"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="98dp" />
+        tools:layout_editor_absoluteY="509dp" />
 
     <Button
         android:id="@+id/buttonPlus"
@@ -134,9 +187,9 @@
         android:text="@string/buttonNumberPlus"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
+        tools:layout_editor_absoluteY="509dp" />
 
     <Button
         android:id="@+id/buttonEqually"
@@ -145,9 +198,9 @@
         android:text="@string/buttonNumberEqually"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
+        tools:layout_editor_absoluteY="578dp" />
 
     <Button
         android:id="@+id/buttonPercent"
@@ -156,9 +209,9 @@
         android:text="@string/buttonNumberPercent"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
+        tools:layout_editor_absoluteY="578dp" />
 
     <Button
         android:id="@+id/buttonMultiply"
@@ -167,9 +220,9 @@
         android:text="@string/buttonNumberMultiply"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.374"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
+        tools:layout_editor_absoluteY="649dp" />
 
     <Button
         android:id="@+id/buttonDivide"
@@ -178,9 +231,9 @@
         android:text="@string/buttonNumberDivide"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
+        tools:layout_editor_absoluteY="649dp" />
 
     <Button
         android:id="@+id/buttonSquare"
@@ -189,9 +242,9 @@
         android:text="@string/buttonNumberSquare"
         android:textSize="@dimen/textButtonSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="277dp" />
+        tools:layout_editor_absoluteY="578dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
