@@ -18,4 +18,5 @@
     <string name="buttonNumberDivide">÷</string>
     <string name="buttonNumberEqually">=</string>
     <string name="buttonNumberSquare">√¯</string>
+    <string name="buttonNumberMinus">-</string>
 </resources>
