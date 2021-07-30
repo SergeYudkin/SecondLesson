@@ -9,17 +9,26 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int value1 =1;
-    private int value2 =2;
-    private int value3 =3;
-    private int value4 =4;
-    private int value5 =5;
-    private int value6 =6;
-    private int value7 =7;
-    private int value8 =8;
-    private int value9 =9;
-    private int value0 =0;
+    private int value1 = 1;
+    private int value2 = 2;
+    private int value3 = 3;
+    private int value4 = 4;
+    private int value5 = 5;
+    private int value6 = 6;
+    private int value7 = 7;
+    private int value8 = 8;
+    private int value9 = 9;
+    private int value0 = 0;
     private String valueDot = "•";
+    private String valueC = "С";
+    private String valuePlus = "+";
+    private String valueEqually = "=";
+    private String valuePercent = "%";
+    private String valueMultiply = "*";
+    private String valueDivide = "÷";
+    private String valueSquare = "√¯";
+    private String valueMinus = "-";
+
 
     TextView textView1;
 
@@ -34,8 +43,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button9;
     Button button0;
     Button buttonDot;
-
-
+    Button buttonС;
+    Button buttonPlus;
+    Button buttonEqually;
+    Button buttonPercent;
+    Button buttonMultiply;
+    Button buttonDivide;
+    Button buttonSquare;
+    Button buttonMinus;
 
 
     @Override
@@ -56,6 +71,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button9 = findViewById(R.id.button9);
         button0 = findViewById(R.id.button0);
         buttonDot = findViewById(R.id.buttonDot);
+        buttonС = findViewById(R.id.buttonC);
+        buttonPlus = findViewById(R.id.buttonPlus);
+        buttonEqually = findViewById(R.id.buttonEqually);
+        buttonPercent = findViewById(R.id.buttonPercent);
+        buttonMultiply = findViewById(R.id.buttonMultiply);
+        buttonDivide = findViewById(R.id.buttonDivide);
+        buttonSquare = findViewById(R.id.buttonSquare);
+        buttonMinus = findViewById(R.id.buttonMinus);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
@@ -68,9 +91,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button9.setOnClickListener(this);
         button0.setOnClickListener(this);
         buttonDot.setOnClickListener(this);
-
-
-
+        buttonС.setOnClickListener(this);
+        buttonPlus.setOnClickListener(this);
+        buttonEqually.setOnClickListener(this);
+        buttonPercent.setOnClickListener(this);
+        buttonMultiply.setOnClickListener(this);
+        buttonDivide.setOnClickListener(this);
+        buttonSquare.setOnClickListener(this);
+        buttonMinus.setOnClickListener(this);
 
 
     }
@@ -78,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.button1:
                 textView1.setText(String.valueOf(value1));
                 break;
@@ -111,6 +139,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonDot:
                 textView1.setText(String.valueOf(valueDot));
+                break;
+            case R.id.buttonC:
+                textView1.setText(String.valueOf(valueC));
+                break;
+            case R.id.buttonPlus:
+                textView1.setText(String.valueOf(valuePlus));
+                break;
+            case R.id.buttonEqually:
+                textView1.setText(String.valueOf(valueEqually));
+                break;
+            case R.id.buttonPercent:
+                textView1.setText(String.valueOf(valuePercent));
+                break;
+            case R.id.buttonMultiply:
+                textView1.setText(String.valueOf(valueMultiply));
+                break;
+            case R.id.buttonDivide:
+                textView1.setText(String.valueOf(valueDivide));
+                break;
+            case R.id.buttonSquare:
+                textView1.setText(String.valueOf(valueSquare));
+                break;
+            case R.id.buttonMinus:
+                textView1.setText(String.valueOf(valueMinus));
                 break;
         }
     }
