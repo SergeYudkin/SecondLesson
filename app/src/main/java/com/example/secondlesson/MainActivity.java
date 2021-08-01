@@ -1,34 +1,19 @@
 package com.example.secondlesson;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int value1 = 1;
-    private int value2 = 2;
-    private int value3 = 3;
-    private int value4 = 4;
-    private int value5 = 5;
-    private int value6 = 6;
-    private int value7 = 7;
-    private int value8 = 8;
-    private int value9 = 9;
-    private int value0 = 0;
-    private String valueDot = "•";
-    private String valueC = "С";
-    private String valuePlus = "+";
-    private String valueEqually = "=";
-    private String valuePercent = "%";
-    private String valueMultiply = "*";
-    private String valueDivide = "÷";
-    private String valueSquare = "√¯";
-    private String valueMinus = "-";
 
+    static String TAG = "values";
 
     TextView textView1;
 
@@ -52,12 +37,109 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonSquare;
     Button buttonMinus;
 
+    Values values;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.constreint_layout);
 
+        initView();
+        initListeners();
+        values = new Values();
+
+
+    }
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(TAG,values);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        values = (Values) savedInstanceState.getSerializable(TAG);
+        initView();
+
+    }
+
+
+
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button1:
+                textView1.setText(String.valueOf(values.getValue1()));
+                break;
+            case R.id.button2:
+                textView1.setText(String.valueOf(values.getValue2()));
+                break;
+            case R.id.button3:
+                textView1.setText(String.valueOf(values.getValue3()));
+                break;
+            case R.id.button4:
+                textView1.setText(String.valueOf(values.getValue4()));
+                break;
+            case R.id.button5:
+                textView1.setText(String.valueOf(values.getValue5()));
+                break;
+            case R.id.button6:
+                textView1.setText(String.valueOf(values.getValue6()));
+                break;
+            case R.id.button7:
+                textView1.setText(String.valueOf(values.getValue7()));
+                break;
+            case R.id.button8:
+                textView1.setText(String.valueOf(values.getValue8()));
+                break;
+            case R.id.button9:
+                textView1.setText(String.valueOf(values.getValue9()));
+                break;
+            case R.id.button0:
+                textView1.setText(String.valueOf(values.getValue0()));
+                break;
+            case R.id.buttonDot:
+                textView1.setText(String.valueOf(values.getValueDot()));
+                break;
+            case R.id.buttonC:
+                textView1.setText(String.valueOf(values.getValueC()));
+                break;
+            case R.id.buttonPlus:
+                textView1.setText(String.valueOf(values.getValuePlus()));
+                break;
+            case R.id.buttonEqually:
+                textView1.setText(String.valueOf(values.getValueEqually()));
+                break;
+            case R.id.buttonPercent:
+                textView1.setText(String.valueOf(values.getValuePercent()));
+                break;
+            case R.id.buttonMultiply:
+                textView1.setText(String.valueOf(values.getValueMultiply()));
+                break;
+            case R.id.buttonDivide:
+                textView1.setText(String.valueOf(values.getValueDivide()));
+                break;
+            case R.id.buttonSquare:
+                textView1.setText(String.valueOf(values.getValueSquare()));
+                break;
+            case R.id.buttonMinus:
+                textView1.setText(String.valueOf(values.getValueMinus()));
+                break;
+
+        }
+
+    }
+
+
+
+
+
+    private void initView() {
         textView1 = findViewById(R.id.textView1);
 
         button1 = findViewById(R.id.button1);
@@ -79,7 +161,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonDivide = findViewById(R.id.buttonDivide);
         buttonSquare = findViewById(R.id.buttonSquare);
         buttonMinus = findViewById(R.id.buttonMinus);
-
+    }
+    private void initListeners() {
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
@@ -99,71 +182,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonDivide.setOnClickListener(this);
         buttonSquare.setOnClickListener(this);
         buttonMinus.setOnClickListener(this);
-
-
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button1:
-                textView1.setText(String.valueOf(value1));
-                break;
-            case R.id.button2:
-                textView1.setText(String.valueOf(value2));
-                break;
-            case R.id.button3:
-                textView1.setText(String.valueOf(value3));
-                break;
-            case R.id.button4:
-                textView1.setText(String.valueOf(value4));
-                break;
-            case R.id.button5:
-                textView1.setText(String.valueOf(value5));
-                break;
-            case R.id.button6:
-                textView1.setText(String.valueOf(value6));
-                break;
-            case R.id.button7:
-                textView1.setText(String.valueOf(value7));
-                break;
-            case R.id.button8:
-                textView1.setText(String.valueOf(value8));
-                break;
-            case R.id.button9:
-                textView1.setText(String.valueOf(value9));
-                break;
-            case R.id.button0:
-                textView1.setText(String.valueOf(value0));
-                break;
-            case R.id.buttonDot:
-                textView1.setText(String.valueOf(valueDot));
-                break;
-            case R.id.buttonC:
-                textView1.setText(String.valueOf(valueC));
-                break;
-            case R.id.buttonPlus:
-                textView1.setText(String.valueOf(valuePlus));
-                break;
-            case R.id.buttonEqually:
-                textView1.setText(String.valueOf(valueEqually));
-                break;
-            case R.id.buttonPercent:
-                textView1.setText(String.valueOf(valuePercent));
-                break;
-            case R.id.buttonMultiply:
-                textView1.setText(String.valueOf(valueMultiply));
-                break;
-            case R.id.buttonDivide:
-                textView1.setText(String.valueOf(valueDivide));
-                break;
-            case R.id.buttonSquare:
-                textView1.setText(String.valueOf(valueSquare));
-                break;
-            case R.id.buttonMinus:
-                textView1.setText(String.valueOf(valueMinus));
-                break;
-        }
     }
 }
