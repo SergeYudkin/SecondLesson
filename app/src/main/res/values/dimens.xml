@@ -2,4 +2,8 @@
 <resources>
     <dimen name="textButtonSize">30sp</dimen>
     <dimen name="processinSizeText">35sp</dimen>
+    <dimen name="widthImageView">411dp</dimen>
+    <dimen name="heightImageView">730dp</dimen>
+    <dimen name="widthTextView">0dp</dimen>
+    <dimen name="heightTextView">60dp</dimen>
 </resources>

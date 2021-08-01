@@ -9,8 +9,8 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="411dp"
-        android:layout_height="730dp"
+        android:layout_width="@dimen/widthImageView"
+        android:layout_height="@dimen/heightImageView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/widthTextView"
+        android:layout_height="@dimen/heightTextView"
         android:textColor="@color/black"
         android:background="@color/white"
         android:textSize="@dimen/processinSizeText"
