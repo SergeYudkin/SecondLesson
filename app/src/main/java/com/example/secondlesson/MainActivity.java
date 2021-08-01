@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         values = (Values) savedInstanceState.getSerializable(TAG);
-        initView();
+
 
     }
 
@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonMinus:
                 textView1.setText(String.valueOf(values.getValueMinus()));
                 break;
+            default:break;
 
         }
 
