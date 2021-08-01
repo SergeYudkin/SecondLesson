@@ -51,23 +51,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(TAG,values);
+        values.setCurrentText(textView1.getText().toString());
+        outState.putSerializable(TAG, values);
     }
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         values = (Values) savedInstanceState.getSerializable(TAG);
+        textView1.setText(values.getCurrentText());
 
 
     }
-
-
-
 
 
     @Override
@@ -130,14 +128,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonMinus:
                 textView1.setText(String.valueOf(values.getValueMinus()));
                 break;
-            default:break;
+            default:
+                break;
 
         }
 
     }
-
-
-
 
 
     private void initView() {
@@ -163,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonSquare = findViewById(R.id.buttonSquare);
         buttonMinus = findViewById(R.id.buttonMinus);
     }
+
     private void initListeners() {
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);

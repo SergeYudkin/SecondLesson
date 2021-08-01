@@ -15,6 +15,17 @@ public class Values implements Serializable {
     private int value9 = 9;
     private int value0 = 0;
 
+    private String currentText = "";
+
+    public String getCurrentText() {
+        return currentText;
+    }
+
+    public void setCurrentText(String currentText) {
+        this.currentText = currentText;
+    }
+
+
     public void setValue1(int value1) {
         this.value1 = value1;
     }
