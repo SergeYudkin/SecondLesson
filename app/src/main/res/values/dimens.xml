@@ -6,4 +6,5 @@
     <dimen name="heightImageView">730dp</dimen>
     <dimen name="widthTextView">0dp</dimen>
     <dimen name="heightTextView">60dp</dimen>
+    <dimen name="TextSizeRadioButton">20sp</dimen>
 </resources>
