@@ -19,4 +19,6 @@
     <string name="buttonNumberEqually">=</string>
     <string name="buttonNumberSquare">√¯</string>
     <string name="buttonNumberMinus">-</string>
+    <string name="darkStyleRadioButton">Dark</string>
+    <string name="lightStyleRadioButton">Light</string>
 </resources>

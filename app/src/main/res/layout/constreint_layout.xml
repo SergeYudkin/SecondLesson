@@ -13,27 +13,25 @@
             android:id="@+id/dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="Dark"
+            android:layout_marginTop="@dimen/paddingRadioButton"
+            android:text="@string/darkStyleRadioButton"
             android:textStyle="bold"
             android:textColor="@color/design_default_color_error"
             android:textSize="@dimen/TextSizeRadioButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
-        <RadioButton
-            android:id="@+id/light"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Light"
-            android:textStyle="bold"
-            android:textColor="@color/design_default_color_error"
-            android:textSize="@dimen/TextSizeRadioButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dark" />
 
-
-
+    <RadioButton
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lightStyleRadioButton"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="@dimen/TextSizeRadioButton"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dark" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView2"
@@ -41,7 +39,7 @@
         android:layout_height="@dimen/heightImageView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
