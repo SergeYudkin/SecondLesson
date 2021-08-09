@@ -49,7 +49,19 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+
+
+    }
 
 
     @Override
