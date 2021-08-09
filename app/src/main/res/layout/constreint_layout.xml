@@ -7,19 +7,17 @@
     android:background="@drawable/fontravka"
     tools:context=".MainActivity">
 
-
-
-        <RadioButton
-            android:id="@+id/dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/paddingRadioButton"
-            android:text="@string/darkStyleRadioButton"
-            android:textStyle="bold"
-            android:textColor="@color/design_default_color_error"
-            android:textSize="@dimen/TextSizeRadioButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline11" />
+    <RadioButton
+        android:id="@+id/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/paddingRadioButton"
+        android:text="@string/darkStyleRadioButton"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="@dimen/TextSizeRadioButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
 
     <RadioButton
@@ -32,24 +30,22 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dark" />
-
-    <androidx.appcompat.widget.AppCompatImageView
+    
+    <ImageView
         android:id="@+id/appCompatImageView2"
         android:layout_width="@dimen/widthImageView"
         android:layout_height="@dimen/heightImageView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="@dimen/widthTextView"
         android:layout_height="@dimen/heightTextView"
+        android:background="@color/calc2"
         android:textColor="@color/black"
-        android:background="@color/white"
         android:textSize="@dimen/processinSizeText"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -352,7 +348,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
