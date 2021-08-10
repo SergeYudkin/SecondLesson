@@ -1,7 +1,7 @@
 package com.example.secondlesson;
 
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,8 +11,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-public abstract class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class MainActivity extends SecondActivity implements View.OnClickListener {
 
 
 
@@ -49,11 +48,7 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.constreint_layout);
 
-        Intent intent = new Intent(this,SecondActivity.class);
-        startActivity(intent);
-
-
-
+        init();
         initView();
         initListeners();
         values = new Values();
@@ -61,6 +56,43 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
 
     }
 
+    private void init() {
+        ((RadioButton)findViewById(R.id.dark)).setOnClickListener(this);
+        ((RadioButton)findViewById(R.id.light)).setOnClickListener(this);
+        switch (getCurrentStyle()){
+            case 1:
+                ((RadioButton)findViewById(R.id.dark)).setChecked(true);
+                break;
+            case 2:
+                ((RadioButton)findViewById(R.id.light)).setChecked(true);
+                break;
+        }
+    }
+
+
+    private void setCurrentStyle(int currentStyle) {
+        SharedPreferences sharedPreferences = getSharedPreferences(KEY_ST,MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_CURRENT_ST,currentStyle);
+        editor.apply();
+    }
+    private int getCurrentStyle() {
+        SharedPreferences sharedPreferences = getSharedPreferences(KEY_ST,MODE_PRIVATE);
+        return (sharedPreferences.getInt(KEY_CURRENT_ST,-1));
+
+    }
+
+    private int getRaalStyle(int curentTheme) {
+        switch (curentTheme) {
+            case light:
+                return R.style.light1;
+
+            case dark:
+                return R.style.dark1;
+            default: return 0;
+
+        }
+    }
 
 
     @Override
@@ -78,6 +110,7 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
 
 
     }
+
 
 
     @Override
@@ -142,14 +175,26 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
                 textView1.setText(String.valueOf(values.getValueMinus()));
                 break;
 
+            case R.id.dark:
+                setCurrentStyle(dark);
+                Intent i = new Intent(this,MainActivity.class);
+                startActivity(i);
+                recreate();
+                break;
+            case R.id.light:
+                setCurrentStyle(light);
+                Intent j = new Intent(this,MainActivity.class);
+                startActivity(j);
+                recreate();
+                break;
+
+
             default:
                 break;
 
         }
 
     }
-
-
 
 
     private void initView() {
@@ -174,6 +219,7 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
         buttonDivide = findViewById(R.id.buttonDivide);
         buttonSquare = findViewById(R.id.buttonSquare);
         buttonMinus = findViewById(R.id.buttonMinus);
+
     }
 
     private void initListeners() {
@@ -196,5 +242,6 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
         buttonDivide.setOnClickListener(this);
         buttonSquare.setOnClickListener(this);
         buttonMinus.setOnClickListener(this);
+
     }
 }

@@ -1,7 +1,6 @@
 package com.example.secondlesson;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,8 +15,8 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-    static final int light = 1;
-    static final int dark = 2;
+    static final int light = 2;
+    static final int dark = 1;
 
 
     static final String KEY_ST = "st";
@@ -30,9 +29,6 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.constreint_layout);
 
         init();
-
-
-
 
     }
 
@@ -71,9 +67,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.dark:
                 setCurrentStyle(dark);
+                Intent i = new Intent(this,MainActivity.class);
+               startActivity(i);
                 break;
             case R.id.light:
                 setCurrentStyle(light);
+                Intent j = new Intent(this,MainActivity.class);
+                startActivity(j);
                 break;
 
             default:
