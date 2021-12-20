@@ -46,7 +46,7 @@
         android:id="@+id/textView1"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="@color/white"
+        android:background="@color/calc2"
         android:textColor="@color/black"
         android:textSize="@dimen/processinSizeText"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -103,7 +103,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.70" />
-
 
 
     <androidx.constraintlayout.widget.Guideline
